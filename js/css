@@ -1,0 +1,82 @@
+ character.
+	A comma can be included by using it where a character number is
+	expected.  Example:
+		"48-57,,,_"	Digits, comma and underscore.
+	A comma can be excluded by prepending a '^'.  Example:
+		" -~,^,,9"	All characters from space to '~', excluding
+				comma, plus <Tab>.
+	See |option-backslash| about including spaces and backslashes.
+
+						*'isident'* *'isi'*
+'isident' 'isi'		string	(default for MS-DOS, Win32 and OS/2:
+					   "@,48-57,_,128-167,224-235"
+				otherwise: "@,48-57,_,192-255")
+			global
+			{not in Vi}
+	The characters given by this option are included in identifiers.
+	Identifiers are used in recognizing environment variables and after a
+	match of the 'define' option.  It is also used for "\i" in a
+	|pattern|.  See 'isfname' for a description of the format of this
+	option.
+	Careful: If you change this option, it might break expanding
+	environment variables.  E.g., when '/' is included and Vim tries to
+	expand "$HOME/.viminfo".  Maybe you should change 'iskeyword' instead.
+
+						*'iskeyword'* *'isk'*
+'iskeyword' 'isk'	string (Vim default for MS-DOS and Win32:
+					    "@,48-57,_,128-167,224-235"
+				   otherwise:  "@,48-57,_,192-255"
+				Vi default: "@,48-57,_")
+			local to buffer
+			{not in Vi}
+	Keywords are used in searching and recognizing with many commands:
+	"w", "*", "[i", etc.  It is also used for "\k" in a |pattern|.  See
+	'isfname' for a description of the format of this option.  For C
+	programs you could use "a-z,A-Z,48-57,_,.,-,>".
+	For a help file it is set to all non-blank printable characters except
+	'*', '"' and '|' (so that CTRL-] on a command finds the help for that
+	command).
+	When the 'lisp' option is on the '-' character is always included.
+	This option also influences syntax highlighting, unless the syntax
+	uses |:syn-iskeyword|.
+	NOTE: This option is set to the Vi default value when 'compatible' is
+	set and to the Vim default value when 'compatible' is reset.
+
+						*'isprint'* *'isp'*
+'isprint' 'isp'	string	(default for MS-DOS, Win32, OS/2 and Macintosh:
+				"@,~-255"; otherwise: "@,161-255")
+			global
+			{not in Vi}
+	The characters given by this option are displayed directly on the
+	screen.  It is also used for "\p" in a |pattern|.  The characters from
+	space (ASCII 32) to '~' (ASCII 126) are always displayed directly,
+	even when they are not included in 'isprint' or excluded.  See
+	'isfname' for a description of the format of this option.
+
+	Non-printable characters are displayed with two characters:
+		  0 -  31	"^@" - "^_"
+		 32 - 126	always single characters
+		   127		"^?"
+		128 - 159	"~@" - "~_"
+		160 - 254	"| " - "|~"
+		   255		"~?"
+	When 'encoding' is a Unicode one, illegal bytes from 128 to 255 are
+	displayed as <xx>, with the hexadecimal value of the byte.
+	When 'display' contains "uhex" all unprintable characters are
+	displayed as <xx>.
+	The SpecialKey highlighting will be used for unprintable characters.
+	|hl-SpecialKey|
+
+	Multi-byte characters 256 and above are always included, only the
+	characters up to 255 are specified with this option.  When a character
+	is printable but it is not available in the current font, a
+	replacement character will be shown.
+	Unprintable and zero-width Unicode characters are displayed as <xxxx>.
+	There is no option to specify these characters.
+
+			*'joinspaces'* *'js'* *'nojoinspaces'* *'nojs'*
+'joinspaces' 'js'	boolean	(default on)
+			global
+			{not in Vi}
+	Insert two spaces after a '.', '?' and '!' with a join command.
+	When 'cpop
