@@ -47,8 +47,8 @@ const Footer = () => {
               Vimal Bera
             </div>
             <p className="text-muted-foreground text-sm">
-              Full Stack Developer specializing in backend development.
-              Currently building transportation systems at Amazon.
+              Backend Developer building transportation systems and scalable
+              solutions at Amazon.
             </p>
           </div>
 

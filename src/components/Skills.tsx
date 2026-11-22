@@ -9,7 +9,7 @@ const Skills = () => {
     {
       title: "Core Languages",
       skills: ["Java", "JavaScript", "Go", "Ruby", "Scala", "Node.js"],
-      color: "bg-primary/10 text-primary border-primary/20",
+      color: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 border-indigo-500/20",
     },
     {
       title: "Frameworks & Platforms",
@@ -20,7 +20,7 @@ const Skills = () => {
         "Amazon Web Services",
         "Oracle Cloud",
       ],
-      color: "bg-accent/10 text-accent-foreground border-accent/20",
+      color: "bg-purple-500/10 text-purple-600 dark:text-purple-300 border-purple-500/20",
     },
     {
       title: "Specializations",
@@ -31,7 +31,7 @@ const Skills = () => {
         "Crypto Trading",
         "Algorithm Design",
       ],
-      color: "bg-secondary/10 text-secondary-foreground border-secondary/20",
+      color: "bg-blue-500/10 text-blue-600 dark:text-blue-300 border-blue-500/20",
     },
     {
       title: "Industry Experience",
@@ -43,7 +43,7 @@ const Skills = () => {
         "Fractal Analytics",
         "Capgemini",
       ],
-      color: "bg-primary/10 text-primary border-primary/20",
+      color: "bg-violet-500/10 text-violet-600 dark:text-violet-300 border-violet-500/20",
     },
     {
       title: "System Design",
@@ -54,7 +54,7 @@ const Skills = () => {
         "Order Tracking",
         "Social Media",
       ],
-      color: "bg-accent/10 text-accent-foreground border-accent/20",
+      color: "bg-cyan-500/10 text-cyan-600 dark:text-cyan-300 border-cyan-500/20",
     },
   ];
 

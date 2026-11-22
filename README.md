@@ -1,6 +1,6 @@
 # Vimal Bera — Portfolio
 
-Personal portfolio website for **Vimal Bera**, Full Stack Developer specializing in backend systems.
+Personal portfolio website for **Vimal Bera**, Backend Developer.
 
 Live site: [https://vimalbera.in](https://vimalbera.in)
 

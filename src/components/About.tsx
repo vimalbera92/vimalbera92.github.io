@@ -44,7 +44,7 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Full Stack Developer born &amp; raised in India, currently
+                Backend Developer born &amp; raised in India, currently
                 working on amazing stuff at Amazon. I specialize in backend
                 development with expertise in transportation systems and
                 e-commerce solutions.

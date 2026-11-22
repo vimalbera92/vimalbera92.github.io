@@ -36,7 +36,7 @@ const Hero = () => {
             Vimal Bera
           </h1>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-indigo-200">
-            Full Stack Developer
+            Backend Developer
           </h2>
           <p className="text-xl md:text-2xl text-indigo-100/80 mb-8 max-w-2xl mx-auto font-light">
             Backend specialist currently working at Amazon, building
@@ -47,7 +47,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
             <Button
               size="lg"
-              className="bg-white text-indigo-900 hover:bg-indigo-100 font-semibold"
+              className="font-semibold transition-all duration-300 shadow-md bg-gradient-primary text-white hover:opacity-95 hover:shadow-glow dark:bg-none dark:bg-white dark:text-indigo-950 dark:hover:bg-indigo-50 border-0"
               asChild
             >
               <a
@@ -59,9 +59,8 @@ const Hero = () => {
               </a>
             </Button>
             <Button
-              variant="outline"
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10"
+              className="font-semibold transition-all duration-300 shadow-md bg-white text-indigo-900 hover:bg-indigo-50 border-0 dark:border dark:border-white/30 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 dark:shadow-none backdrop-blur-sm"
               onClick={() => {
                 document
                   .querySelector("#contact")
